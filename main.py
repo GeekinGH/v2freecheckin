@@ -60,7 +60,7 @@ def send(info, mail, receivers, subject='', imgpth=''):
         message.attach(content)
 
     try:
-        server = smtplib.SMTP_SSL("smtp.qq.com", 465)
+        server = smtplib.SMTP_SSL("smtp.163.com", 465)
         server.login(sender, key)
         server.sendmail(sender, receivers, message.as_string())
         server.quit()
